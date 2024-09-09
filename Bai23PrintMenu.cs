@@ -20,15 +20,11 @@ public class Bai23PrintMenu
     {
         for (int i = 0; i < menus.Length; i++)
         {
-            Console.WriteLine("Menu: " + (i + 1));
-            Console.WriteLine("--Id:");
-            Console.WriteLine("----" + menus[i].Id);
-            Console.WriteLine("--title:");
-            Console.WriteLine("----" + menus[i].Title);
-
-            Console.WriteLine("--parent_id:");
-            Console.WriteLine("----" + menus[i].Parent_id);
-
+            for (int j = 0; j < menus[i].Parent_id; j++)
+            {
+                Console.Write("--");
+            }
+            Console.WriteLine(menus[i].Title);
         }
     }
 }
