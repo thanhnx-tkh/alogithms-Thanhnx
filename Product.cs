@@ -2,21 +2,19 @@
 
 public class Product
 {
-    public int Id { get; set; }
     public string Name { get; set; }
     public int CategoryId { get; set; }
     public int Price { get; set; }
+    public int Quality { get; set; }
+    public string NameCategory { get; set; }
 
-    public Product()
+
+    public Product(string name, int price, int quality ,int categoryId)
     {
-    }
-    public Product(int id, string name, int categoryId, int price)
-    {
-        this.Id = id;
+        this.Quality = quality;
         this.Name = name;
         this.CategoryId = categoryId;
         this.Price = price;
-
     }
 
 }
