@@ -120,10 +120,20 @@ public class Demo
         //Console.WriteLine(stack.Get());
         //Console.WriteLine(stack.Get());
 
+        // Dữ liệu mẫu menu
+        //List<Menu> menus = new List<Menu>
+        //{
+        //    new Menu { Id = 1, Title = "Thể thao", ParentId = 0 },
+        //    new Menu { Id = 2, Title = "Xã hội", ParentId = 0 },
+        //    new Menu { Id = 3, Title = "Thể thao trong nước", ParentId = 1 },
+        //    new Menu { Id = 4, Title = "Giao thông", ParentId = 2 },
+        //    new Menu { Id = 5, Title = "Môi trường", ParentId = 2 },
+        //    new Menu { Id = 6, Title = "Thể thao quốc tế", ParentId = 1 },
+        //    new Menu { Id = 7, Title = "Môi trường đô thị", ParentId = 5 },
+        //    new Menu { Id = 8, Title = "Giao thông ùn tắc", ParentId = 4 }
+        //};
 
-
-
-
+        //Bai23PrintMenu.PrintMenu(menus);
         Console.ReadLine();
 
     }

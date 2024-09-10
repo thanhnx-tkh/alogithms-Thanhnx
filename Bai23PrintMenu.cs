@@ -5,26 +5,32 @@ public class Menu
 {
     public int Id { get; set; }
     public string Title { get; set; }
-    public int Parent_id { get; set; }
-    public Menu(int id, string title, int parenId)
-    {
-        this.Id = id;
-        this.Title = title;
-        this.Parent_id = parenId;
-    }
+    public int ParentId { get; set; }
 }
 
 public class Bai23PrintMenu
 {
-    public static void PrintMenu(Menu[] menus)
+    public static void PrintMenu(List<Menu> menus)
     {
-        for (int i = 0; i < menus.Length; i++)
+        foreach (var menu in menus)
         {
-            for (int j = 0; j < menus[i].Parent_id; j++)
+            if (menu.ParentId == 0)
             {
-                Console.Write("--");
+                PrintMenuRecursive(menu, menus, 0);
             }
-            Console.WriteLine(menus[i].Title);
+        }
+    }
+
+    private static void PrintMenuRecursive(Menu menu, List<Menu> menus, int depth)
+    {
+        Console.WriteLine($"{new string('-', depth * 2)} {menu.Title}");
+
+        foreach (var submenu in menus)
+        {
+            if (submenu.ParentId == menu.Id)
+            {
+                PrintMenuRecursive(submenu, menus, depth + 1);
+            }
         }
     }
 }
