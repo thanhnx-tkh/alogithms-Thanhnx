@@ -1,19 +1,36 @@
 ﻿using System;
-using System.Collections.Generic;
 
 public class Stack<T>
 {
-    private List<T> list = new List<T>();
+    private Node<T> top;
+    private int count;
 
+    public Stack()
+    {
+        top = null;
+        count = 0;
+    }
     public T Get()
     {
-        T temp = list[list.Count - 1];
-        list.RemoveAt(list.Count - 1);
-        return temp;
+        if (IsEmpty())
+        {
+            throw new InvalidCastException("Is Empty");
+        }
+        T value = top.Data;
+        top = top.Next;
+        count--;
+        return value;
     }
-    public void Push(T t)
+    public void Push(T item)
     {
-        list.Add(t);
+        Node<T> newNode = new Node<T>(item);
+        newNode.Next = top;
+        top = newNode;
+        count++;
+    }
+    private bool IsEmpty()
+    {
+        return count == 0;
     }
 }
 

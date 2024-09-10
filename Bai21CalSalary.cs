@@ -18,8 +18,9 @@ public class Bai21CalSalary
         {
             return salary;
         }
-        salary = CalSalaryDeQuy(salary, n - 1) * 0.1 + CalSalaryDeQuy(salary, n - 1);
-        return salary;
+        double previousSalary = CalSalaryDeQuy(salary, n - 1);
+        double increasedSalary = previousSalary * 0.1 + previousSalary;
+        return increasedSalary;
     }
 
 

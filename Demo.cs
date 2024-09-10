@@ -54,7 +54,7 @@ public class Demo
         //products.Add(new Product("Mouse", 25, 50, 4));
         //products.Add(new Product("VGA", 60, 35, 3));
         //products.Add(new Product("Monitor", 120, 28, 2));
-        //products.Add(new Product("Case", 120, 28, 5));
+        //products.Add(new Product("Case", 120, 28, 5));    
 
 
 
@@ -100,14 +100,28 @@ public class Demo
         //queue.Push(2);
         //queue.Push(3);
 
+        //Console.WriteLine("--------Queue-------");
+
+
+        //Console.WriteLine(queue.Get());
+        //Console.WriteLine(queue.Get());
         //Console.WriteLine(queue.Get());
 
+
         //Stack<int> stack = new Stack<int>();
+
         //stack.Push(1);
         //stack.Push(2);
         //stack.Push(3);
 
+        //Console.WriteLine("--------Stack-------");
+
         //Console.WriteLine(stack.Get());
+        //Console.WriteLine(stack.Get());
+        //Console.WriteLine(stack.Get());
+
+
+
 
 
         Console.ReadLine();
